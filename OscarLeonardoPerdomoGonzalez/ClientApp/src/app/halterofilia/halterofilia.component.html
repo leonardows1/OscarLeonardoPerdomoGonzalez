@@ -1,0 +1,24 @@
+<h1 id="tableLabel">Halterofila - Juegos Olimpicos</h1>
+
+<p *ngIf="!halterofilias"><em>Cargando...</em></p>
+
+<table class='table table-striped' aria-labelledby="tableLabel" *ngIf="halterofilias">
+  <thead>
+    <tr>
+      <th>Pais</th>
+      <th>Nombre</th>
+      <th>Arranque (Kg)</th>
+      <th>Envion (Kg)</th>
+      <th>Peso Total (Kg)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let halterofilia of halterofilias">
+      <td>{{ halterofilia.pais }}</td>
+      <td>{{ halterofilia.deportista.nombre }}</td>
+      <td>{{ halterofilia.arranqueKg }}</td>
+      <td>{{ halterofilia.envionKg }}</td>
+      <td>{{ halterofilia.totalPesoKg }}</td>
+    </tr>
+  </tbody>
+</table>
