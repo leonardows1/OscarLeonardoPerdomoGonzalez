@@ -25,6 +25,7 @@ namespace OscarLeonardoPerdomoGonzalez.Services
                 TotalPeso = createHalterofiliaDTO.TotalPeso
             };
             await _context.Halterofilias.AddAsync(halterofilia);
+
             return await _context.Halterofilias.SingleOrDefaultAsync(h => h.HalterofiliaId == halterofilia.HalterofiliaId);
         }
     }
