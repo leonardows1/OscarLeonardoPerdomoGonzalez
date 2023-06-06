@@ -10,4 +10,13 @@
         public int EnvionKg { get; set; }
         public int TotalPeso { get; set; }
     }
+
+    public class CreateHalterofiliaDTO
+    {
+        public string Pais { get; set; } = string.Empty;
+        public int DeportistaId { get; set; }
+        public int ArranqueKg { get; set; }
+        public int EnvionKg { get; set; }
+        public int TotalPeso { get; set; }
+    }
 }

@@ -5,11 +5,11 @@ import { HttpClient } from '@angular/common/http';
   selector: 'app-halterofilia',
   templateUrl: './halterofilia.component.html'
 })
-export class FetchDataComponent {
+export class HalterofiliaComponent {
   public halterofilias: Halterofilia[] = [];
 
   constructor(http: HttpClient, @Inject('BASE_URL') baseUrl: string) {
-    http.get<Halterofilia[]>(baseUrl + 'wheaterforecast').subscribe(result => {
+    http.get<Halterofilia[]>(baseUrl + 'halterofilia').subscribe(result => {
       this.halterofilias = result;
     }, error => console.error(error));
   }
